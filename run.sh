@@ -6,7 +6,7 @@ source ./config.sh
 
 set +e
 while true; do
-  nmap_output="$(nmap "${ANDROID_HOSTS}" -p "T:${ANDROID_PORTS}")"
+  nmap_output="$(nmap "${ANDROID_HOSTS}" -p "T:${ANDROID_PORTS}" --max-retries 0 --host-timeout "${ANDROID_HOSTS_TIMEOUT}")"
   echo "nmap_output=${nmap_output}"
   while IFS= read -r line ; do
     if [[ "${line}" =~ ^Nmap\ scan\ report\ for.*\((.*)\)$ ]]; then

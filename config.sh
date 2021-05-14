@@ -7,3 +7,8 @@ ANDROID_HOSTS='10.0.0.4'
 # TCP Ports or ranges.
 # Examples:
 ANDROID_PORTS='1024-65535'
+
+#  Give up on target after this long
+#  Options which take <time> are in seconds, or append 'ms' (milliseconds),
+#  's' (seconds), 'm' (minutes), or 'h' (hours) to the value (e.g. 30m).
+ANDROID_HOSTS_TIMEOUT='2m'
