@@ -1,0 +1,41 @@
+# adb wifi connect daemon
+
+## short description
+Easy and convenient way to auto-connect to your android phone with adb over WIFI.
+
+## System requirements
+I tested this only on linux, but it should work macos too and maybe even on windows if you manage to install nmap and run bash scripts there.
+
+## Usage
+
+### 1. steps to execute on your android phone
+1. Make sure you are a developer: Tap the build number seven times in Settings > About phone.
+2. Enable Wireless Debugging in System > Developer Options.
+3. Note down the IP address and port number that is displayed when being in Wireless Debugging menu (previous step).
+4. Tap 'Pair device with paring code.'
+
+### 2. steps to execute on your computer
+1. Install https://nmap.org/download.html and https://developer.android.com/studio
+2. `adb pair <your ip from step 1.3>:<your port from step 1.3>`, e.g. `adb pair 10.0.0.4:42707` and enter the pairing code (step 1.4).
+3. Install this tool:
+```shell script
+git clone "https://github.com/gernotfeichter/adb-wifi-connect.d.git" "${HOME}/.adb-wifi-connect.d"
+```
+4. Configure this tool: Adapt file "${HOME}/.adb-wifi-connect.d", further docu within the file.
+5. Run this tool: 
+```shell script
+cd "${HOME}/.adb-wifi-connect.d" && ./run.sh
+```
+6. Now you should see the device in the dropdown when opening Android Studio!
+
+If you like what this did and want to connect permanently, add step 2.5 to your autostart!
+
+## long description
+
+### motivation
+When enabling wireless debugging on modern android phones you no longer have a fixed port number, but a dynamic one.
+Re-connecting becomes a burden, because the port number typically has to be re-typed on each new connect, this means two manual steps:
+1. opening the Wireless Debugging menu on your phone
+2. entering the adb connect command with parameters obtained from the previous step.
+
+This can be automated!
