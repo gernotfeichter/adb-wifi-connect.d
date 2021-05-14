@@ -14,6 +14,7 @@ while true; do
     fi
     if [[ "${line}" =~ ^([[:digit:]]*)\/tcp.*open.*$ ]]; then
       current_port="${BASH_REMATCH[1]}"
+      adb start-server
       adb connect "${current_host}:${current_port}"
     fi
   done <<< "${nmap_output}"

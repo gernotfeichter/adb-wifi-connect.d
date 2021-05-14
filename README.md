@@ -15,7 +15,7 @@ I tested this only on linux, but it should work macos too and maybe even on wind
 4. Tap 'Pair device with paring code.'
 
 ### 2. steps to execute on your computer
-1. Install https://nmap.org/download.html and https://developer.android.com/studio
+1. Install https://nmap.org/download.html and https://developer.android.com/studio and make sure the adb command is on the PATH!
 2. `adb pair <your ip from step 1.3>:<your port from step 1.3>`, e.g. `adb pair 10.0.0.4:42707` and enter the pairing code (step 1.4).
 3. Install this tool:
 ```shell script
