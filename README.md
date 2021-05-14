@@ -26,9 +26,10 @@ git clone "https://github.com/gernotfeichter/adb-wifi-connect.d.git" "${HOME}/.a
 ```shell script
 cd "${HOME}/.adb-wifi-connect.d" && ./run.sh
 ```
-6. Now you should see the device in the dropdown when opening Android Studio!
+6. Wait a little, scanning a single ip over all ports takes about 30s, behold if you chose a range of ips!
+7. Now you should see the device in the dropdown when opening Android Studio!
 
-If you like what this did and want to connect permanently, add step 2.5 to your autostart!
+If you like what this did and want to connect permanently, add step 2.5 to your autostart, if you followed the conventions you should be ok to directly add "${HOME}/.adb-wifi-connect.d/autostart.sh" to your autostart!
 
 ## long description
 
