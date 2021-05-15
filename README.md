@@ -41,3 +41,6 @@ Re-connecting becomes a burden, because the port number typically has to be re-t
 2. typing the adb connect command with parameters obtained from the previous step
 
 This can be automated!
+
+## license
+GNU GENERAL PUBLIC LICENSE Version 2, see [LICENSE](LICENSE)
