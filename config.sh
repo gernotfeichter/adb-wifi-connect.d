@@ -13,5 +13,8 @@ ANDROID_PORTS='1024-65535'
 #  's' (seconds), 'm' (minutes), or 'h' (hours) to the value (e.g. 30m).
 ANDROID_HOSTS_TIMEOUT='2m'
 
-#
+# POLL_SLEEP_SECONDS
+POLL_SLEEP_SECONDS=60
+
+# adb command path
 PATH="${PATH}:${HOME}/Android/Sdk/platform-tools"
