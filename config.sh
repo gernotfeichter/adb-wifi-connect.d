@@ -14,6 +14,7 @@ ANDROID_PORTS='1024-65535'
 ANDROID_HOSTS_TIMEOUT='2m'
 
 # interval between scans
+# lower is better for responsiveness but higher on network/cpu utilisation
 POLL_SLEEP_SECONDS=60
 
 # adb command path
