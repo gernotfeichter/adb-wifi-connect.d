@@ -34,9 +34,9 @@ If you like what this did and want to connect permanently, add step 2.5 to your 
 ## long description
 
 ### motivation
-When enabling wireless debugging on modern android phones you no longer have a fixed port number, but a dynamic one.
-Re-connecting becomes a burden, because the port number typically has to be re-typed on each new connect, this means two manual steps:
+When enabling wireless debugging on android phones you get a dynamic debugging port per default.
+Re-connecting becomes a burden, because the port number typically has to be re-typed on each new connect, this involves two manual steps:
 1. opening the Wireless Debugging menu on your phone
-2. entering the adb connect command with parameters obtained from the previous step.
+2. typing the adb connect command with parameters obtained from the previous step
 
 This can be automated!

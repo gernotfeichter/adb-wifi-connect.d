@@ -4,6 +4,9 @@ set -x
 set -e
 source ./config.sh
 
+echo "INFO: stdout sample"
+echo "ERROR: stderr sample" 1>&2
+
 set +e
 while true; do
   nmap_output="$(nmap "${ANDROID_HOSTS}" -p "T:${ANDROID_PORTS}" --max-retries 0 --host-timeout "${ANDROID_HOSTS_TIMEOUT}")"

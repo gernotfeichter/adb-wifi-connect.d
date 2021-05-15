@@ -12,3 +12,6 @@ ANDROID_PORTS='1024-65535'
 #  Options which take <time> are in seconds, or append 'ms' (milliseconds),
 #  's' (seconds), 'm' (minutes), or 'h' (hours) to the value (e.g. 30m).
 ANDROID_HOSTS_TIMEOUT='2m'
+
+#
+PATH="${PATH}:${HOME}/Android/Sdk/platform-tools"
