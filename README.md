@@ -5,6 +5,7 @@ Easy and convenient way to auto-connect to your android phone with adb over WIFI
 
 ## System requirements
 I tested this only on linux, but it should work macos too and maybe even on windows if you manage to install nmap and run bash scripts there.
+The phone needs not be rooted for this to work!
 
 ## Usage
 
