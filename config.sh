@@ -15,7 +15,13 @@ ANDROID_HOSTS_TIMEOUT='2m'
 
 # interval between scans
 # lower is better for responsiveness but higher on network/cpu utilisation
-POLL_SLEEP_SECONDS=60
+POLL_SLEEP_SECONDS=5
+
+# scan only when at least one of those processes are running (ADD your IDE process name here)
+# if you want to scan always, you might choose the init process
+REQUIRED_PROCESSES=( "studio.sh" "studio.exe" "studio.bat" "code" "code.exe" )
+
+ONLY_SCAN_WHEN_NO_DEVICE_ONLINE=true
 
 # adb command path
 PATH="${PATH}:${HOME}/Android/Sdk/platform-tools"
