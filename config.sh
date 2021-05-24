@@ -19,7 +19,7 @@ POLL_SLEEP_SECONDS=5
 
 # scan only when at least one of those processes are running (ADD your IDE process name here)
 # if you want to scan always, you might choose the init process
-REQUIRED_PROCESSES=( "studio.sh" "studio.exe" "studio.bat" "code" "code.exe" )
+REQUIRED_PROCESSES=( "studio.sh" "studio.exe" "studio.bat" )
 
 ONLY_SCAN_WHEN_NO_DEVICE_ONLINE=true
 
