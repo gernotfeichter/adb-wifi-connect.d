@@ -14,6 +14,7 @@ The phone needs not be rooted for this to work!
 2. Enable Wireless Debugging in System > Developer Options.
 3. Note down the IP address and port number that is displayed when being in Wireless Debugging menu (previous step).
 4. Tap 'Pair device with paring code.'
+5. Recommendation to avoid having to regular re-pair: Tap 'Disable adb authorisation timeout' in 'Developer Options' menu.
 
 ### 2. steps to execute on your computer
 1. Install https://nmap.org/download.html and https://developer.android.com/studio and make sure the adb command is on the PATH!
