@@ -31,6 +31,11 @@ while true; do
     echo "nmap_output=${nmap_output}"
     while IFS= read -r line; do
       if [[ "${line}" =~ ^Nmap\ scan\ report\ for.*\((.*)\)$ ]]; then
+        # style with hostname
+        current_host="${BASH_REMATCH[1]}"
+      fi
+      if [[ "${line}" =~ ^Nmap\ scan\ report\ for\ ([[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+)$ ]]; then
+        # style without hostname
         current_host="${BASH_REMATCH[1]}"
       fi
       if [[ "${line}" =~ ^([[:digit:]]*)\/tcp.*open.*$ ]]; then
