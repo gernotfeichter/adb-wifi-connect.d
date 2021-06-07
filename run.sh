@@ -2,7 +2,6 @@
 
 set -x
 set -e
-source ./config.sh
 
 function anyRequiredProcessRunning() {
   for process in ${REQUIRED_PROCESSES}; do
@@ -26,6 +25,7 @@ function deviceOfflineCheck() {
 
 set +e
 while true; do
+  source ./config.sh
   if [[ "$(anyRequiredProcessRunning)" == "true" ]] && [[ "$(deviceOfflineCheck)" == "true" ]]; then
     nmap_output="$(nmap "${ANDROID_HOSTS}" -p "T:${ANDROID_PORTS}" --max-retries 0 --host-timeout "${ANDROID_HOSTS_TIMEOUT}")"
     echo "nmap_output=${nmap_output}"
