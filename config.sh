@@ -21,7 +21,12 @@ POLL_SLEEP_SECONDS=5
 # if you want to scan always, you might choose the init process
 REQUIRED_PROCESSES=( "studio.sh" "studio.exe" "studio.bat" )
 
+# if ONLY_SCAN_WHEN_NO_DEVICE_ONLINE=true and adb devices lists at least one device: do not scan (save resources)
 ONLY_SCAN_WHEN_NO_DEVICE_ONLINE=true
 
-# adb command path
-PATH="${PATH}:${HOME}/Android/Sdk/platform-tools"
+# add adb to command path
+ADB_FOLDER="${HOME}/Android/Sdk/platform-tools"
+if [[ ! "${PATH}" =~ ${ADB_FOLDER} ]]; then
+  PATH="${PATH}:${HOME}/Android/Sdk/platform-tools"
+fi
+
