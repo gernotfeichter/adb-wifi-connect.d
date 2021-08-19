@@ -23,7 +23,7 @@ The phone needs not be rooted for this to work!
 ```shell script
 git clone "https://github.com/gernotfeichter/adb-wifi-connect.d.git" "${HOME}/.adb-wifi-connect.d"
 ```
-4. Configure this tool: Adapt file "${HOME}/.adb-wifi-connect.d", further docu within the file.
+4. Configure this tool: Edit the file "${HOME}/.adb-wifi-connect.d/config.sh" and set the ANDROID_HOSTS to the correct IP of the device. Further docu within the file.
 5. Run Android Studio or any IDE process you registered in the previous step (setting `REQUIRED_PROCESSES`).
 5. Run this tool: 
 ```shell script
