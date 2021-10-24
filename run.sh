@@ -27,7 +27,7 @@ set +e
 while true; do
   source ./config.sh
   if [[ "$(anyRequiredProcessRunning)" == "true" ]] && [[ "$(deviceOfflineCheck)" == "true" ]]; then
-    nmap_output="$(nmap "${ANDROID_HOSTS}" -p "T:${ANDROID_PORTS}" --max-retries 0 --host-timeout "${ANDROID_HOSTS_TIMEOUT}")"
+    nmap_output="$(nmap "${ANDROID_HOSTS}" -p "T:${ANDROID_PORTS}" -T "${NMAP_SCAN_MODE}")"
     echo "nmap_output=${nmap_output}"
     while IFS= read -r line; do
       if [[ "${line}" =~ ^Nmap\ scan\ report\ for.*\((.*)\)$ ]]; then

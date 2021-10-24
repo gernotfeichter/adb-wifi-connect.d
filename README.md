@@ -4,8 +4,43 @@
 Easy and convenient way to auto-connect to your android phone with adb over WIFI in a daemon like way.
 
 ## System requirements
-I tested this only on linux, but it should work macos too and maybe even on windows if you manage to install nmap and run bash scripts there.
-The phone needs not be rooted for this to work!
+
+### client (development machine)
+<table>
+    <thead>
+        <th>OS</th>
+        <th>Supported</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><img alt="Linux" src="https://github.com/EgoistDeveloper/operating-system-logos/blob/master/src/48x48/LIN.png"/></td>
+            <td>yes</td>
+        </tr>
+        <tr>
+            <td><img alt="macOS" src="https://github.com/gernotfeichter/operating-system-logos/blob/fix/uppercase-mac-logo/src/48x48/MAC.png"/></td>
+            <td>should (happy about user feedback)</td>
+        </tr>
+        <tr>
+            <td><img alt="Windows" src="https://github.com/EgoistDeveloper/operating-system-logos/raw/master/src/48x48/WIN.png"/></td>
+            <td>could (happy about user feedback)</td>
+        </tr>
+    </tbody>
+</table>
+
+### server (android phone)
+
+<table>
+    <thead>
+        <th>OS</th>
+        <th>Supported</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><img alt="Android" src="https://github.com/EgoistDeveloper/operating-system-logos/raw/master/src/48x48/AND.png"/></td>
+            <td>Any android version that supports wireless debugging should work. The phone needs NOT be rooted!</td>
+        </tr>
+    </tbody>
+</table>
 
 ## Usage
 
@@ -16,7 +51,7 @@ The phone needs not be rooted for this to work!
 4. Tap 'Pair device with paring code.'
 5. Recommendation to avoid having to regular re-pair: Tap 'Disable adb authorisation timeout' in 'Developer Options' menu.
 
-### 2. steps to execute on your computer
+### 2. steps to execute on your development machine
 1. Install https://nmap.org/download.html and https://developer.android.com/studio and make sure the adb command is on the PATH!
 2. `adb pair <your ip from step 1.3>:<your port from step 1.3>`, e.g. `adb pair 10.0.0.4:42707` and enter the pairing code (step 1.4).
 3. Install this tool:
@@ -34,6 +69,12 @@ cd "${HOME}/.adb-wifi-connect.d" && ./run.sh
 
 If you like what this did and want to connect permanently, add step 2.6 to your autostart, if you followed the conventions you should be ok to directly add "${HOME}/.adb-wifi-connect.d/daemon.sh" to your autostart!
 
+### troubleshooting
+Check the log file:
+```shell script
+tail -F ~/.adb-wifi-connect.d/log
+```
+
 ## long description
 
 ### motivation
@@ -44,7 +85,7 @@ Re-connecting becomes a burden, because the port number typically has to be re-t
 
 This is partially automated by this tool, such that step 1. is the only manual step that is required.
 
-## description
+### description
 Per default configuration, this tool automatically connects to previously paired devices given that:
 * Android Studio is running (or any other configured IDE, see setting `REQUIRED_PROCESSES`)
 * No other device is already connected
