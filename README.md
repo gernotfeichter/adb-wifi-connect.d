@@ -53,12 +53,12 @@ Easy and convenient way to auto-connect to your android phone with adb over WIFI
 
 ### 2. steps to execute on your development machine
 1. Install https://nmap.org/download.html and https://developer.android.com/studio and make sure the adb command is on the PATH!
-2. `adb pair <your ip from step 1.3>:<your port from step 1.3>`, e.g. `adb pair 10.0.0.4:42707` and enter the pairing code (step 1.4).
+2. `adb pair <your ip from step 1.4>:<your port from step 1.4>`, e.g. `adb pair 10.0.0.4:42707` and enter the pairing code (step 1.4).
 3. Install this tool:
 ```shell script
 git clone "https://github.com/gernotfeichter/adb-wifi-connect.d.git" "${HOME}/.adb-wifi-connect.d"
 ```
-4. Configure this tool: Edit the file "${HOME}/.adb-wifi-connect.d/config.sh" and set the ANDROID_HOSTS to the correct IP of the device. Further docu within the file.
+4. Configure this tool: Edit the file "${HOME}/.adb-wifi-connect.d/config.sh" and set the ANDROID_HOSTS to the correct IP of the device (from step 1.3). Further docu within the file.
 5. Run Android Studio or any IDE process you registered in the previous step (setting `REQUIRED_PROCESSES`).
 6. Run this tool: 
 ```shell script

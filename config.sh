@@ -4,7 +4,7 @@
 # Examples: scanme.nmap.org, microsoft.com/24, 192.168.0.1; 10.0.0-255.1-254
 # Hint: to support changing IP addresses, I recommend using hostnames, but this might not work for everyone: https://superuser.com/questions/408539/how-to-set-friendly-network-name-of-android-computer/1504366
 # Other than that you may also use the IP and create a lease on your router!
-ANDROID_HOSTS='Pixel-5'
+ANDROID_HOSTS='10.0.0.3'
 
 # TCP Ports or ranges.
 # Examples:
