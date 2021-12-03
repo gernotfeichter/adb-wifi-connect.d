@@ -35,6 +35,6 @@ NMAP_SCAN_MODE=normal
 # add adb to command path
 ADB_FOLDER="${HOME}/Android/Sdk/platform-tools"
 if [[ ! "${PATH}" =~ ${ADB_FOLDER} ]]; then
-  PATH="${PATH}:${HOME}/Android/Sdk/platform-tools"
+  PATH="${ADB_FOLDER}:${PATH}"
 fi
 
