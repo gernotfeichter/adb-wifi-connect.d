@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "run.sh started"
+
 set -x
 set -e
 
@@ -21,6 +23,16 @@ function deviceOfflineCheck() {
     return 0
   fi
   echo "true"
+}
+
+# if you followed the README.md, the parent would be daemon.sh
+# if the daemon was killed, we (=subprocess of daemon) also want to die
+function dieIfMyParentDied() {
+  ps -p "${PPID}" > /dev/null
+  parent_running_check_exit_code=$?
+  if [[ ${parent_running_check_exit_code} != 0 ]]; then
+    exit 0
+  fi
 }
 
 set +e
@@ -45,6 +57,6 @@ while true; do
       fi
     done <<<"${nmap_output}"
   fi
-
+  dieIfMyParentDied
   sleep "${POLL_SLEEP_SECONDS}"
 done

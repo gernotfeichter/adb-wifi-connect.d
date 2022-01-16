@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -x
 LOGFILE="${HOME}/.adb-wifi-connect.d/log"
 cd "${HOME}/.adb-wifi-connect.d"
 rm "${LOGFILE}"

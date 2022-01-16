@@ -70,10 +70,20 @@ cd "${HOME}/.adb-wifi-connect.d" && ./run.sh
 If you like what this did and want to connect permanently, add step 2.6 to your autostart, if you followed the conventions you should be ok to directly add "${HOME}/.adb-wifi-connect.d/daemon.sh" to your autostart!
 
 ### troubleshooting
+
+#### logs
 Check the log file:
 ```shell script
 tail -F ~/.adb-wifi-connect.d/log
 ```
+
+#### kill processes
+this kills the daemon:
+```shell script
+pkill -f .adb-wifi-connect.d
+```
+the daemon however spans another subprocess (`run.sh` script), it should die soon after the daemon
+was killed.
 
 ## long description
 
