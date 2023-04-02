@@ -17,7 +17,7 @@ Easy and convenient way to auto-connect to your android phone with adb over WIFI
             <td>yes</td>
         </tr>
         <tr>
-            <td><img alt="macOS" src="https://github.com/gernotfeichter/operating-system-logos/blob/fix/uppercase-mac-logo/src/48x48/MAC.png"/></td>
+            <td><img alt="macOS" src="https://github.com/EgoistDeveloper/operating-system-logos/blob/master/src/48x48/MAC.png"/></td>
             <td>should (happy about user feedback)</td>
         </tr>
         <tr>
