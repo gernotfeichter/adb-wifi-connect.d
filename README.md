@@ -18,11 +18,11 @@ Easy and convenient way to auto-connect to your android phone with adb over WIFI
         </tr>
         <tr>
             <td><img alt="macOS" src="https://github.com/EgoistDeveloper/operating-system-logos/blob/master/src/48x48/MAC.png"/></td>
-            <td>should (happy about user feedback)</td>
+            <td>should work(happy about user feedback)</td>
         </tr>
         <tr>
             <td><img alt="Windows" src="https://github.com/EgoistDeveloper/operating-system-logos/raw/master/src/48x48/WIN.png"/></td>
-            <td>could (happy about user feedback)</td>
+            <td>could work(happy about user feedback)</td>
         </tr>
     </tbody>
 </table>
@@ -67,7 +67,8 @@ cd "${HOME}/.adb-wifi-connect.d" && ./run.sh
 7. Wait a little, scanning a single ip over all ports takes about 30s, behold if you chose a range of ips!
 8. Now you should see the device in the dropdown when opening Android Studio!
 
-If you like what this did and want to connect permanently, add step 2.6 to your autostart, if you followed the conventions you should be ok to directly add "${HOME}/.adb-wifi-connect.d/daemon.sh" to your autostart!
+If you like what this did and want to connect permanently, add step 2.6 to your autostart.
+In case you followed the conventions you should be able to directly add "${HOME}/.adb-wifi-connect.d/daemon.sh" to your autostart!
 
 ### troubleshooting
 
