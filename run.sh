@@ -6,7 +6,7 @@ set -x
 set -e
 
 function anyRequiredProcessRunning() {
-  for process in ${REQUIRED_PROCESSES}; do
+  for process in "${REQUIRED_PROCESSES[@]}"; do
     if pgrep -x "${process}" >/dev/null; then
       echo "true"
       return 0
@@ -35,6 +35,7 @@ function dieIfMyParentDied() {
   fi
 }
 
+# main loop
 set +e
 while true; do
   source ./config.sh
