@@ -21,8 +21,11 @@ SCAN_TIMEOUT='4m'
 POLL_SLEEP_SECONDS=5
 
 # scan only when at least one of those processes are running (ADD your IDE process name here)
-# if you want to scan always, you might choose the init process
-REQUIRED_PROCESSES=( "studio.sh" "studio.exe" "studio.bat" )
+# if you want to scan always, you might choose the init process or systemd process
+# note: fsnotifier is a subprocess of studio.sh and for some reason (most likely systemd reason)
+# the studio.sh does not show up as process when saving studio.sh as desktop application launcher
+# (at least on my current fedora/gnome combo)
+REQUIRED_PROCESSES=( "studio.sh" "studio.exe" "studio.bat" "fsnotifier" )
 
 # if ONLY_SCAN_WHEN_NO_DEVICE_ONLINE=true and 'adb devices' command lists at least one device: do
 # not scan (save resources)
