@@ -25,7 +25,7 @@ POLL_SLEEP_SECONDS=5
 # note: fsnotifier is a subprocess of studio.sh and for some reason (most likely systemd reason)
 # the studio.sh does not show up as process when saving studio.sh as desktop application launcher
 # (at least on my current fedora/gnome combo)
-REQUIRED_PROCESSES=( "studio.sh" "studio.exe" "studio.bat" "fsnotifier" )
+REQUIRED_PROCESSES=( "studio.sh" "studio.exe" "studio.bat" "fsnotifier" "code")
 
 # if ONLY_SCAN_WHEN_NO_DEVICE_ONLINE=true and 'adb devices' command lists at least one device: do
 # not scan (save resources)
