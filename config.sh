@@ -14,7 +14,7 @@ ANDROID_PORTS='1024-65535'
 # Give up scanning after this long
 # Options which take <time> are in seconds, or append 'ms' (milliseconds),
 # 's' (seconds), 'm' (minutes), 'h' (hours) or 'd' (days) to the value (e.g. 30m).
-SCAN_TIMEOUT='4m'
+SCAN_TIMEOUT='1m'
 
 # interval between scans
 # lower is better for responsiveness but higher on network/cpu utilisation
