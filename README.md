@@ -1,5 +1,8 @@
 # adb wifi connect daemon
 
+> Note: since adb version 35, there is built-in support in android studio to auto-connect via adb to your android phone, which makes this tool obsolete!
+> However, since I could not quickly get this running outside of android studio, e.g. via command line, maybe this tool has some extened life.
+
 ## short description
 Easy and convenient way to auto-connect to your android phone with adb over WIFI in a daemon like way.
 
